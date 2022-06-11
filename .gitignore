@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules
+
+# Cypress specific directories
+cypress/results
+
+# Logs
+logs
+*.log
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release

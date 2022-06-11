@@ -1,0 +1,30 @@
+{
+  "name": "ssprcypresscodebase",
+  "version": "1.0.0",
+  "description": "SSPR Cypress Project",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^10.0.2",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.0.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sspr": "cypress open",
+    "clean:reports": "rmdir /S /Q cypress\\results\\reports && mkdir cypress\\results\\reports && mkdir cypress\\results\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "script": "cypress run",
+    "testscript": "cypress run --headless --browser chrome --spec ./cypress/integration/tests/*.js",
+    "testscript2": "cypress run --headed --spec ./cypress/integration/tests/4.5/Modules/Public/*.js",
+    "mochareport-merge": "mochawesome-merge ./cypress/results/reports/*.json > cypress/results/reports/mochareports/finalreport.json",
+    "mochareport-gen": "marge cypress/results/reports/mochareports/finalreport.json -f report -o cypress/results/reports/mochareports",
+    "posttestrun": "npm run mochareport-merge && npm run mochareport-gen",
+    "mochareport-screenshot": "cp -r cypress\\screenshots cypress\\results\\reports\\mochareports\\screenshots",
+    "testrun": "npm run testscript2 || npm run posttestrun"
+  },
+  "author": "",
+  "license": "ISC"
+}

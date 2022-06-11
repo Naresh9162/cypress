@@ -1,0 +1,14 @@
+{
+    "LDAP":"LDAP",
+    "Modules":"Modules",
+            "Authenticated":"Authenticated",
+            "Public":"Public",
+                    "ForgottenPassword":"Forgotten Password",
+                                       "Profiles":"Profiles",
+                                                 "default":"default",
+                                                          "Definition":"Definition",
+                
+    "Policies":"Policies",
+    "Settings":"Settings",
+    "Display Text":"Display Text"
+}

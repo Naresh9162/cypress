@@ -1,0 +1,12 @@
+•	Folder Structure :
+<Cypress>
+|
+|--fixtures : Holds test data in json format. Lets say we have login test and the logintest.json holds the username and password data specific to the test. As a standard, if our test is about forgottenpassword module, we provide a meaning name related to the test module for the fixture files. (forgottenpassword.json) 
+|--integrations : Folder holds the tests,ui and Utils folders. All the tests are categorized within the tests folder with the ssprversion names as top folder within which sub folders representing the modules. Please note foldernames are provided same like sspr modules placed inside sspr configeditor or other pages. Inorder to hold POM, ui folder holds the page level classes and the Utils folder does the action. 
+|--plugins : 
+|--results : Holds sub folders reports, screenshots and videos. Reports contains mochareports as sub folder, which holds the final html and json reports of individual test spec or multiple test specs. After the spec execution screenshots of failed tests will be created and kept in the screenshots folder. Video folder contains the execution videos for better debugging purpose. 
+|--scripts :  Supporting scripts for test case execution can be kept inside the scripts folder. 
+|--support : For POM linking the ui classes with action the action javascripts under the Utils folder has to be imported to Commands.js.
+|--node_modules : Holds the supporting framework libraries.
+|--cypress.json : Cypress framework specific configurations. Inorder to point the testcase against your setup, change the baseUrl with the format <https:ssprdomain:port> . Also keep a note, instead of changing the defaultCommandTimeout and pageLoadTimeout directly in this file, override inside the testfile as per the demand. 
+|--package.json : All the custom scripts and dependencies.
