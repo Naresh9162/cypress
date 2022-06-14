@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     parameters{
-        string(name: 'SPEC', defaulValue: "cypress/e2e/tests/demo.cy.js", description: "Enter the script")
+        string(name: 'SPEC', defaultValue: "cypress/e2e/tests/demo.cy.js", description: "Enter the script")
         choice(name: 'BROWSER', choices:['chrome','edge','firefox'], description:" browser")
     }
     options {
@@ -10,7 +10,9 @@ pipeline{
     }
     stages{
         stage('builting the application'){
+            steps{
             echo "naresh"
+            }
         }
          stage('Testing the application'){
             steps{
