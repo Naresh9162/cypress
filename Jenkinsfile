@@ -16,8 +16,8 @@ pipeline{
         }
          stage('Testing the application'){
             steps{
-               powershell 'npm install cypress'
-               powershell 'npx cypress run  --headless --spec cypress/e2e/tests/demo.cy.js'
+               sh 'npm install cypress'
+               sh 'npx cypress run  --headless --spec cypress/e2e/tests/demo.cy.js'
             }
          }
          stage('Deploying')
