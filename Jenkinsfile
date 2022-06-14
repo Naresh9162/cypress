@@ -10,12 +10,12 @@ pipeline{
     }
     stages{
         stage('builting the application'){
-            echo 'naresh'
+            echo "naresh"
         }
          stage('Testing the application'){
             steps{
-                "npm install cypress"
-                "npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js"
+                bat "npm install cypress"
+                bat "npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js"
             }
          }
          stage('Deploying')
