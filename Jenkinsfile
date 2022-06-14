@@ -3,20 +3,19 @@ pipeline{
 
     parameters{
         string(name: 'SPEC', defaulValue: "cypress/e2e/tests/demo.cy.js", description: "Enter the script")
-        choice(name: 'BROWSER', choices:['chrome','edge','firefox'], description:" browser")
+        choice(name: 'BROWSER', choices:['chrome','edge','firefox'], description:"browser")
     }
-    option
-    {
+    options{
         ansiColor('xtrem')
     }
     stages{
         stage('builting the application'){
-            echo 'naresh'
+            echo "naresh"
         }
          stage('Testing the application'){
             steps{
-                "npm install cypress"
-                "npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js"
+               bat "npm install cypress"
+               bat "npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js"
             }
          }
          stage('Deploying')
