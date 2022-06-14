@@ -22,7 +22,9 @@ pipeline{
          }
          stage('Deploying')
          {
+             steps{
             echo "naresh"
+             }
          }
     }
     post{
