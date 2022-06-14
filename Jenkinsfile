@@ -16,8 +16,8 @@ pipeline{
         }
          stage('Testing the application'){
             steps{
-                bat "npm install cypress"
-                bat "npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js"
+                'npm install cypress'
+                'npx cypress run  --headed --spec cypress/e2e/tests/demo.cy.js'
             }
          }
          stage('Deploying')
