@@ -10,6 +10,6 @@ describe('Resetting Password', function(){
        // cy.copyXmlFile()
    //  })
     afterEach(function() {
-        cy.copyXmlFile()
+       // cy.copyXmlFile()
      })
 })
