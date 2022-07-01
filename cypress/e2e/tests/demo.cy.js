@@ -1,7 +1,7 @@
 describe('Resetting Password', function(){
     it('Enabling forget password using security Question',function(){
        // cy.visit("/sspr")
-        cy.exec(echo 'nareshsharma')
+        cy.log('created new user')
        // cy.exec('bash cypress/fixtures/demotest.sh') 
       // cy.copyXmlFile()
     })
